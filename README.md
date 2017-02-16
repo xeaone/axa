@@ -1,2 +1,2 @@
 # axa
-Axa a low level Ajax Xhr library
+Axa a low level Ajax Xhr library.

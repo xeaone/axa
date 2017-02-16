@@ -1,0 +1,28 @@
+{
+  "name": "axa",
+  "version": "1.0.0",
+  "description": "Axa a low level Ajax Xhr library.",
+  "main": "dist/axa.min.js",
+  "module": "dist/axa.min.js",
+  "scripts": {
+    "test": "echo no tests",
+	"browser": "muleify pack src/axa.b.js  dist/axa.min.js -m"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderElias/axa.git"
+  },
+  "keywords": [
+    "axa",
+    "ajax",
+    "xhr",
+    "request",
+    "requests"
+  ],
+  "author": "Alexander Elias",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/AlexanderElias/axa/issues"
+  },
+  "homepage": "https://github.com/AlexanderElias/axa#readme"
+}
