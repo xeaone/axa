@@ -90,3 +90,5 @@ function Axa (options) {
 
 if (typeof window !== 'undefined') window.Axa = Axa;
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') module.exports = Axa;
+
+export default Axa;

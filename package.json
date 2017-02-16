@@ -1,12 +1,11 @@
 {
   "name": "axa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Axa a low level Ajax Xhr library.",
   "main": "dist/axa.min.js",
-  "module": "dist/axa.min.js",
+  "module": "src/axa.b.js",
   "scripts": {
-    "test": "echo no tests",
-	"browser": "muleify pack src/axa.b.js  dist/axa.min.js -m"
+	"build": "muleify pack src/axa.b.js  dist/axa.min.js -m"
   },
   "repository": {
     "type": "git",
