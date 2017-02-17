@@ -1,7 +1,7 @@
 {
   "name": "axa",
-  "version": "1.0.3",
-  "description": "Axa a low level Ajax Xhr library.",
+  "version": "1.0.4",
+  "description": "Axa a low level Ajax/Xhr library.",
   "main": "dist/axa.js",
   "module": "src/axa.b.m.js",
   "scripts": {

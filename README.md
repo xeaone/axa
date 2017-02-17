@@ -8,27 +8,27 @@ Axa a low level Ajax/Xhr library.
 
 ## API
 
-### Astatine.ajax(options)
-Ajax is a lower level utility function that allows for more control but less features than the submit method.
+### Axa.request(options)
+Performance an ajaxa request and is highly configurable.
 
 ##### Options
-- `action: String` Resource action url. **Required**
-- `method: String` Valid methods get, post, put, delete. **Required**
+- `action: String` Resource action url/uri. **Required**
 
-- `success: Function` **Required**
-- `error: Function` **Required**
+- `method: String` Valid methods get, post, put, delete. **Default: GET**
+- `success: Function`
+- `error: Function`
 
-- `data: Object` If method is `GET` than data is concatenated to the `action/url` as parameters.
+- `data: Object` If method is `GET` than data is serialized and concatenated to the `action/url` as parameters.
 
 - `requestType: String` Converts the request data before sending.
 	- `script` 'text/javascript, application/javascript, application/x-javascript'
-	- `json` 'application/json' stringify `options.data`
+	- `json` 'application/json' stringifies `options.data`
 	- `xml` 'application/xml, text/xml'
 	- `html` 'text/html'
 	- `text` 'text/plain'
-	- DEFAULT 'application/x-www-form-urlencoded' serialized `options.data`
+	- **Default** 'application/x-www-form-urlencoded' serializes `options.data`
 
-- `responseType: String` Converts the response data after sending.
+- `responseType: String` Converts the response data after sending a request.
 	- `script` 'text/javascript, application/javascript, application/x-javascript'
 	- `json` 'application/json'
 	- `xml` 'application/xml, text/xml'
@@ -37,16 +37,16 @@ Ajax is a lower level utility function that allows for more control but less fea
 
 - `contentType: String` Short hand to set the Content-Type Headers. (For request)
 - `accept: String` Short hand to set the Accept Headers. (For response)
-
 - `mimeType: String` Overwrites return type.
+
 - `username: String`
 - `password: String`
 - `withCredentials: Boolean`
-- `headers: Object`    A low level headers object it will map directly to the XHR header. The Will overwrite any above options.
+- `headers: Object` A low level headers object. This will map directly to the XMLHttpRequest header. This Will overwrite any previously defined options.
 
 ##### Example
 ```JavaScript
-Astatine.ajax({
+Axa.request({
 	method: 'get',
 	action: '/examples/index.html',
 	data: { name: 'stuff' },
@@ -59,14 +59,26 @@ Astatine.ajax({
 });
 ```
 
-### Astatine.serialize(data)
+
+### Axa.serialize(data)
 
 ##### Parameter
 - `Object` Single level deep key value pare
 
 ##### Example
 ```JavaScript
-var stringData = Astatine.serialize(data);
+var stringData = Axa.serialize(data);
+```
+
+
+### Axa.mime
+
+##### Return
+- `Object` a object containing the mimes.
+
+##### Example
+```JavaScript
+var mime = Axa.mime;
 ```
 
 
