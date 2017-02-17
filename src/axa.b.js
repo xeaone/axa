@@ -1,5 +1,7 @@
 /*
+	@preserve
 	title: axa
+	version: 1.0.2
 	author: Alexander Elias
 	descript: Axa a low level Ajax Xhr library.
 */
@@ -24,7 +26,7 @@ function serialize (data) {
 	return string;
 }
 
-function Axa (options) {
+function request (options) {
 	if (!options) throw new Error('Axa: requires options');
 	if (!options.action) throw new Error('Axa: requires options.action');
 	if (!options.method) options.method = 'GET';
@@ -88,7 +90,10 @@ function Axa (options) {
 	xhr.send(options.data);
 }
 
-if (typeof window !== 'undefined') window.Axa = Axa;
-if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') module.exports = Axa;
+var Axa = {
+	mime: mime,
+	request: request,
+	serialize: serialize
+};
 
 export default Axa;
