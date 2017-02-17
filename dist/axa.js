@@ -1,7 +1,7 @@
 /*
 	@preserve
 	title: axa
-	version: 1.0.2
+	version: 1.0.5
 	author: Alexander Elias
 	descript: Axa a low level Ajax Xhr library.
 */
