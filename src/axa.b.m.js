@@ -1,7 +1,7 @@
 /*
 	@preserve
 	title: axa
-	version: 1.0.5
+	version: 1.0.6
 	author: Alexander Elias
 	descript: Axa a low level Ajax Xhr library.
 */
@@ -37,8 +37,8 @@ function request (options) {
 			options.action = options.action + '?' + serialize(options.data);
 			options.data = null;
 		} else {
-			options.requestType = options.requestType.toLowerCase();
-			options.responseType = options.responseType.toLowerCase();
+			options.requestType = options.requestType ? options.requestType.toLowerCase() : '';
+			options.responseType = options.responseType ? options.responseType.toLowerCase() : '';
 
 			switch (options.requestType) {
 				case 'script': options.contentType = mime.script; break;
